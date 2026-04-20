@@ -1,3 +1,5 @@
 export function templateService() {
-  return "template service";
+  return {
+    templates: ["welcome", "alert", "status"],
+  };
 }
