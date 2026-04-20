@@ -1,5 +1,7 @@
+import { generateTemplateId } from "../utils/generateTemplateId.js";
+
 export const TemplateModel = {
-  id: "",
+  id: generateTemplateId(),
   name: "",
   subject: "",
   content: "",
