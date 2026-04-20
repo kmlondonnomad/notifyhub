@@ -6,6 +6,10 @@ export function templateService(data = {}) {
 
   return {
     templates: ["welcome", "alert", "status"],
-    rendered: templateRenderer("welcome", templateData),
+    rendered: [
+      templateRenderer("welcome", templateData),
+      templateRenderer("alert", templateData),
+      templateRenderer("status", templateData),
+    ],
   };
 }
