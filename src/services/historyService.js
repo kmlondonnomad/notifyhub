@@ -1,3 +1,5 @@
 export function historyService() {
-  return "history service";
+  return {
+    items: [],
+  };
 }
