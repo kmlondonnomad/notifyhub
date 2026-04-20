@@ -1,3 +1,6 @@
 import { statusRoute } from "../src/routes/status.js";
 
-console.log(statusRoute());
+const result = statusRoute();
+
+console.log("statusRoute test");
+console.log(result);
