@@ -1,7 +1,9 @@
 import { isValidStatus } from "./isValidStatus.js";
+import { normalizeStatus } from "./normalizeStatus.js";
 
 export function buildHistoryRecord(item = {}) {
-  const status = isValidStatus(item.status) ? item.status : "pending";
+  const normalizedStatus = normalizeStatus(item.status);
+  const status = isValidStatus(normalizedStatus) ? normalizedStatus : "pending";
 
   return {
     id: item.id || "",
