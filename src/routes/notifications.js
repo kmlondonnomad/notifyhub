@@ -1,3 +1,9 @@
+import { notificationService } from "../services/notificationService.js";
+import { notificationQueue } from "../queue/notificationQueue.js";
+
 export function notificationsRoute() {
-  return "notifications route";
+  return {
+    service: notificationService(),
+    queue: notificationQueue(),
+  };
 }
