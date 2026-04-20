@@ -1,5 +1,7 @@
-export function historyService() {
+import { buildHistoryRecord } from "../utils/buildHistoryRecord.js";
+
+export function historyService(item = {}) {
   return {
-    items: [],
+    items: [buildHistoryRecord(item)],
   };
 }
