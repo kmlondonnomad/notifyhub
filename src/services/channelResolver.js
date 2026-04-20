@@ -1,3 +1,5 @@
+import { CHANNELS } from "../utils/constants.js";
+
 export function channelResolver() {
-  return ["email", "sms", "push"];
+  return CHANNELS;
 }
