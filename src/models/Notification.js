@@ -1,5 +1,7 @@
+import { generateNotificationId } from "../utils/generateNotificationId.js";
+
 export const NotificationModel = {
-  id: "",
+  id: generateNotificationId(),
   channel: "",
   type: "",
   status: "pending",
