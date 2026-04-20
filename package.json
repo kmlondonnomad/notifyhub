@@ -2,9 +2,11 @@
   "name": "notifyhub",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Multi-channel notification system",
   "scripts": {
     "dev": "node src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "node tests/notifications.test.js && node tests/templates.test.js && node tests/history.test.js && node tests/status.test.js"
   }
 }
