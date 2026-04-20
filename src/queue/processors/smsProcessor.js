@@ -1,3 +1,5 @@
+import { sendSms } from "../../channels/sms/twilioProvider.js";
+
 export function smsProcessor() {
-  return "sms processor";
+  return sendSms();
 }
