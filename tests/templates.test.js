@@ -1,3 +1,10 @@
 import { templatesRoute } from "../src/routes/templates.js";
 
-console.log(templatesRoute());
+const result = templatesRoute({
+  name: "Burak",
+  message: "Alert test",
+  status: "sent",
+});
+
+console.log("templatesRoute test");
+console.log(result);
