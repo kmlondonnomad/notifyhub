@@ -1,3 +1,10 @@
 import { notificationsRoute } from "../src/routes/notifications.js";
 
-console.log(notificationsRoute());
+const result = notificationsRoute({
+  channel: "email",
+  type: "welcome",
+  message: "Hello from test",
+});
+
+console.log("notificationsRoute test");
+console.log(result);
