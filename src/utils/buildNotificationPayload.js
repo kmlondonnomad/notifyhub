@@ -1,12 +1,15 @@
 import { isValidChannel } from "./isValidChannel.js";
+import { normalizeChannel } from "./normalizeChannel.js";
 import { normalizeMessage } from "./normalizeMessage.js";
+import { normalizeType } from "./normalizeType.js";
 
 export function buildNotificationPayload(input = {}) {
-  const channel = isValidChannel(input.channel) ? input.channel : "email";
+  const normalizedChannel = normalizeChannel(input.channel);
+  const channel = isValidChannel(normalizedChannel) ? normalizedChannel : "email";
 
   return {
     channel,
-    type: input.type || "system",
+    type: normalizeType(input.type || "system"),
     message: normalizeMessage(input.message),
   };
 }
