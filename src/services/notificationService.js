@@ -1,3 +1,7 @@
+import { channelResolver } from "./channelResolver.js";
+
 export function notificationService() {
-  return "notification service";
+  return {
+    channels: channelResolver(),
+  };
 }
