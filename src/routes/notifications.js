@@ -3,10 +3,13 @@ import { notificationQueue } from "../queue/notificationQueue.js";
 import { retryService } from "../services/retryService.js";
 import { buildApiResponse } from "../utils/buildApiResponse.js";
 
-export function notificationsRoute() {
+export function notificationsRoute(payload = {}) {
+  const notification = notificationService(payload);
+  const queue = notificationQueue(notification);
+
   return buildApiResponse({
-    service: notificationService(),
-    queue: notificationQueue(),
+    notification,
+    queue,
     retry: retryService(),
   });
 }
